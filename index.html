@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 新增選單 -->
+    <ul class="menu">
+      <li><a href="#" onclick="clearIframe()">首頁</a></li>
+      <li><a href="http://127.0.0.1:5500/index.html" target="iframe-display">自我介紹</a></li>
+      <li class="dropdown">
+        作品集
+        <ul class="submenu">
+          <li><a href="https://yzx1229.github.io/221/" target="iframe-display">第一周</a></li>
+          <li><a href="https://yzx1229.github.io/0314/" target="iframe-display">第二周</a></li>
+          <li><a href="https://yzx1229.github.io/week2/" target="iframe-display">第三周</a></li>
+          <li><a href="https://yzx1229.github.io/week1/" target="iframe-display">第四周</a></li>
+        </ul>
+      </li>
+      <li><a href="https://yzx1229.github.io/0321/" target="iframe-display">測驗卷</a></li>
+      <li><a href="https://cfchen58.synology.me/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%882024/A2/week8/20250411_113919.mp4" target="iframe-display">教學影片</a></li>
+    </ul>
+
+    <!-- 嵌入 iframe -->
+    <iframe name="iframe-display" class="iframe-display" src=""></iframe>
+
+    <script>
+      function clearIframe() {
+        document.querySelector('iframe[name="iframe-display"]').src = '';
+      }
+    </script>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>

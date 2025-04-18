@@ -1,0 +1,81 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* 最底層 */
+}
+
+/* 選單樣式 */
+.menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  z-index: 3; /* 最上層 */
+}
+
+.menu li {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.menu li:hover {
+  background-color: #023e8a;
+}
+
+/* 子選單樣式 */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #0077b6;
+  border-radius: 5px;
+  z-index: 4;
+}
+
+.submenu li {
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+
+.submenu li:hover {
+  background-color: #023e8a;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* iframe 樣式 */
+.iframe-display {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2); /* 背景透明度 0.2 */
+  z-index: 2; /* 第二層 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影效果 */
+}
